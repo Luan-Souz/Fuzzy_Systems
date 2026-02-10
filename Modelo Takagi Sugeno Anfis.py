@@ -12,6 +12,21 @@ import matplotlib.pyplot as plt
 #%% Modelo fuzzy Takagi-Sugeno
 
 def model(x, c, s, p, q):
+
+    '''
+        X: Random training data
+        C: Center of membership functions
+        S: Variance of membership functions
+        P: Weight of each input variable
+        Q: Polarization parameter
+
+    This function estimates the fuzzy model parameters:
+
+        yi_est: Estimate output of model
+        yk: Output of the k-th rule
+        wk: Activation degree of k-th rule      
+        
+    '''
     d = c.shape[0]
     m = c.shape[1]
     uk = np.zeros((d, m))
